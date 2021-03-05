@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head lang="zh-CN">
+        <title>颜艺王（北京）文化传媒有限公司 - Yan Yi Wang Media</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="颜艺王（北京）文化传媒有限公司,颜艺王传媒,YanYiwang" />
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="/static/js/jquery.min.js" charset="UTF-8"></script>
+        <script src="/static/js/bootstrap.min.js" charset="UTF-8"></script>
+        <script src="/static/js/quietflow.min.js" charset="UTF-8"></script>
+        <style>
+            html,body{
+                border: 0;
+                padding: 0;
+                margin: 0;
+                height: 100%;
+            }
+            .header{
+                max-width:1200px;
+                padding-top: 20px;
+                margin: 0 auto;
+            }
+            .navbar-logo{
+                font-family:Heiti SC;
+            }
+            .slogan{
+                width: 80%;
+                height: 75%;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                font-family:Heiti SC;
+                text-align: center; 
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand navbar-logo" href="/"><i></i> Yan Yiwang Media</a>
+                </div>
+                <div class="collapse navbar-collapse" style="float:right"> 
+                    <ul class="nav navbar-nav">  
+                        <li><a href="/index.html"> 主页 </a></li>
+                        <li><a href="/news.html">时间轴</a></li>
+                        <li><a href="/about.html">关于我们</a></li>
+                        <li><a href="/contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="container slogan">
+            <h1 id="slogan">
+                Welcome to Yan Yiwang Media!
+            </h1>
+        </div>
+    </body>
+    <script>
+        $(function(){
+            var i = 0;
+            setInterval(function(){
+                if(i == 0){
+                    $("#slogan").fadeOut(5000)
+                    setTimeout(function(){
+                        $("#slogan").text("欢迎来到颜艺王传媒！")
+                        $("#slogan").fadeIn(5000)
+                    },5000)
+                    i = 1;
+                }else{
+                    $("#slogan").fadeOut(5000)
+                    setTimeout(function(){
+                        $("#slogan").text("Welcome to Yan Yiwang Media!")
+                        $("#slogan").fadeIn(5000)
+                    },5000)
+                    i = 0;
+                }
+            },10000)
+        })
+        $("body").quietflow({
+            theme : "bouncingBalls",
+            speed : 20,
+            specificColors : [
+                "rgba(255, 10, 50, .5)",
+                "rgba(10, 255, 50, .5)", 
+                "rgba(10, 50, 255, .5)", 
+                "rgba(0, 0, 0, .5)"
+            ]
+        })
+    </script>
+</html>
